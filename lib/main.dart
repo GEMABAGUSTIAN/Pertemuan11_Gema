@@ -4,12 +4,12 @@ import 'dart:convert';
 
 void main() {
   runApp(MaterialApp(
-    home: GetData(),
+    home: DataGema(),
   ));
 }
 
-class GetData extends StatelessWidget {
-  final String apiUrl = "https://reqres.in/api/users?per_page=3";
+class DataGema extends StatelessWidget {
+  final String apiUrl = "https://reqres.in/api/users?per_page=10";
 
   Future<List<dynamic>> _fetchDataUsers() async {
     var result = await http.get(Uri.parse(apiUrl));
